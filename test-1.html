@@ -2,10 +2,62 @@
 <html>
 <head>
     <meta charset="UTF-8" />
-    <title>hello</title>
+    <title>ducument</title>
+
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+
+    <style>
+
+        .block{
+            height: 300px;
+            width: 300px;
+            background-color: aquamarine;
+            transition: 1s background-color ;
+        }
+        .bg-purple{
+            background-color: purple;
+        }
+
+
+        </style>
 </head>
-<body>can you see me?
+<body>
+    <!-- <div class="block animate__animated animate__bounce"></div> -->
+    <div class="block"></div>
+    <button type="button" id="hideBtn">F*ck me</button> 
+    <button type="button" id="slideBtn">L*ck me</button>
+    <button type="button" id="classToggle">S*ck me</button>
+    <button type="button" id="addAnimate">Let me water</button>
+
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+        <!-- <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js"></script> -->
+    <script>
+            $('#hideBtn').on('click', function (){
+             console.log('按到了'); 
+            $('.block').hide();
+        });
+    </script>
+
+<script>$('#slideBtn').on('click', function () {
+    $('.block').slideToggle();
+});</script>
+
+<script>
+    $('#classToggle').on('click',function(){
+$('.block').toggleClass('bg-purple');
+    });
+
+</script>
+
+<script>$('#addAnimate').on('click',function(){
+    $('.block').toggleClass();
+});
+</script>
     
-    
-</body>
+
+
+    </body>
 </html>
