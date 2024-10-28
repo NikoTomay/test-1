@@ -14,6 +14,7 @@
         .block{
             height: 300px;
             width: 300px;
+            display: inline-block;
             background-color: aquamarine;
             transition: 1s background-color ;
         }
@@ -26,6 +27,8 @@
 </head>
 <body>
     <!-- <div class="block animate__animated animate__bounce"></div> -->
+    <div class="block"></div>
+    <div class="block"></div>
     <div class="block"></div>
     <button type="button" id="hideBtn">F*ck me</button> 
     <button type="button" id="slideBtn">L*ck me</button>
@@ -52,10 +55,24 @@ $('.block').toggleClass('bg-purple');
 
 </script>
 
-<script>$('#addAnimate').on('click',function(){
-    $('.block').toggleClass();
+<script>
+$('.block').on('click', function () {
+    console.log(this);
+    $(this).addClass('animate__animated animate__swing');
 });
+$('.block').on('animationend', function () {
+            $(this).removeClass('animate__animated animate__swing');
+        });
+
+        $('.block').addClass('animate__animated animate__swing');
+        
+            $('.block').on('animationend',function(){
+$('.block').removeClass('animate__animated animate__swing');
+
+            })
+
 </script>
+
     
 
 
